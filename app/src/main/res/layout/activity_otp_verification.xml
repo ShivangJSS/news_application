@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#21FFC107"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".otp_verification">
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        android:layout_marginBottom="100dp"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_otp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER OTP"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+          <EditText
+              android:layout_width="40dp"
+              android:layout_height="46dp"
+              android:background="@drawable/back2"
+              android:gravity="center"
+              android:imeOptions="actionNext"
+              android:importantForAutofill="no"
+              android:layout_marginTop="20dp"
+              android:layout_marginLeft="5dp"
+              android:id="@+id/input1"
+              android:layout_marginRight="5dp"
+              android:inputType="number"
+              android:maxLength="1"
+              android:textStyle="bold"/>
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:background="@drawable/back2"
+                android:id="@+id/input2"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:maxLength="1"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:background="@drawable/back2"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/input3"
+                android:layout_marginRight="5dp"
+                android:maxLength="1"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:background="@drawable/back2"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:id="@+id/input4"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:background="@drawable/back2"
+                android:gravity="center"
+                android:id="@+id/input5"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:maxLength="1"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:background="@drawable/back2"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:id="@+id/input6"
+                android:importantForAutofill="no"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="19dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIDN'T RECEIVE OTP?"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="resend otp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="verify otp"
+        android:backgroundTint="#FFC107"
+        android:id="@+id/btn2"
+        android:textSize="20dp"/>
+    </LinearLayout>

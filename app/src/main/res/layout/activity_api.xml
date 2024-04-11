@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".api">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CURRENT AFFAIRS"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#FABC02"
+        android:id="@+id/app_title"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:id="@+id/horizontal_button"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Generals"
+           android:background="@drawable/shape"
+           android:backgroundTint="#F8C62F"
+           android:id="@+id/btnnb1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:backgroundTint="#F8C62F"
+            android:text="Bussines"
+            android:id="@+id/btnnb2"/>
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:backgroundTint="#F8C62F"
+        android:text="Sports"
+        android:id="@+id/btnnb3"/>
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Technology"
+            android:background="@drawable/shape"
+            android:backgroundTint="#F8C62F"
+        android:id="@+id/btnnb4"/>
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generals"
+        android:id="@+id/btnnb5"/>
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:backgroundTint="#F8C62F"
+        android:text="Health"
+        android:id="@+id/btnnb6"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Science"
+            android:background="@drawable/shape"
+            android:backgroundTint="#F8C62F"
+            android:id="@+id/btnnb7"/>
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:id="@+id/progress_view"/>
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_view"/>
+
+
+</LinearLayout>
