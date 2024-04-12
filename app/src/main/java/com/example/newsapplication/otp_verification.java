@@ -1,8 +1,10 @@
 package com.example.newsapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,7 +15,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 
 public class otp_verification extends AppCompatActivity {
 
@@ -47,6 +54,22 @@ input1=findViewById(R.id.input1);
            {
              progressBar.setVisibility(View.VISIBLE);
              verifyButtonClick.setVisibility(View.INVISIBLE);
+             PhoneAuthCredential phoneAuthCredential= PhoneAuthProvider.getCredential(
+                     getotpback,enterCodeotp
+             );
+               FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential)
+                       .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                           @Override
+                           public void onComplete(@NonNull Task<AuthResult> task) {
+                               progressBar.setVisibility(View.GONE);
+                               verifyButtonClick.setVisibility(View.VISIBLE);
+                               if (task.isSuccessful()){
+                                   Intent intent=new Intent(getApplicationContext(), api.class);
+                                   intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                   startActivity(intent);
+                               }
+                           }
+                       });
            }
                else {
                Toast.makeText(otp_verification.this, "check internet connection", Toast.LENGTH_SHORT).show();
